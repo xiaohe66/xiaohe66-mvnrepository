@@ -68,6 +68,16 @@
                 </executions>
             </plugin>
 
+            <!-- 跳过测试 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+
             <!-- 设置工程的jdk版本 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -100,7 +110,6 @@
         </plugins>
 
     </build>
-
 
     <distributionManagement>
         <repository>
